@@ -68,5 +68,15 @@
   color: white;
 }
 
+/* //hanson */
 
+.contactInput {
+  padding: 3px;
+  margin: 3px;
+}
 
+.box {
+  padding: 0px 50px 50px 50px;
+  border: 2px solid black;
+  text-align: center;
+}
