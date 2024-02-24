@@ -2,6 +2,10 @@
   color: #114084 #3466aa #82b7dc #F1F1F1 #444444#1C1C1C;
 }
 
+* {
+  font-family: 'Times New Roman', Times, serif
+}
+
 :root {
   --dblue: #114084;
   --blue: #3466aa;
@@ -69,4 +73,36 @@
 }
 
 
+.dashboard-container {
+  margin-top: 60px; /* Adjust based on your navbar height */
+  padding: 20px;
+}
 
+.dashboard-title {
+  color: var(--white);
+
+  text-align: left;
+  padding: 1em;
+  font-size: 2em;
+}
+
+.gpu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1em;
+  color: var(--white);
+}
+
+.gpu {
+  background: var(--grey);
+  border-radius: 30px; 
+  padding: 10px 40px; 
+  margin: 10px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  width: 300px; 
+  text-align: center;
+}
