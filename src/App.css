@@ -1,5 +1,5 @@
 .colors {
-  color: #114084 #3466aa #82b7dc #F1F1F1 #808080#1C1C1C;
+  color: #114084 #3466aa #82b7dc #F1F1F1 #444444#1C1C1C;
 }
 
 :root {
@@ -7,7 +7,7 @@
   --blue: #3466aa;
   --lblue:#82b7dc;
   --white: #F1F1F1;
-  --grey: #808080;
+  --grey: #444444;
   --black: #1c1c1c;
 }
 
@@ -25,7 +25,7 @@
   width: 98%;
   left: 1%;
   border-radius: 1em;
-  background: var(--primary);
+  background: var(--grey);
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   z-index: 50;
 }
@@ -67,3 +67,6 @@
   transform: scale(1.1);
   color: white;
 }
+
+
+
