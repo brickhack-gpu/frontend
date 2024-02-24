@@ -1,35 +1,40 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Spinup from "./spinup";
+import Pricing from "./pricing";
+import Faq from "./faq";
+import Contact from "./contact";
+import Login from "./login"
+import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
+
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Router>
+      <nav className="navbar">
+        <Link className="logo-link" to="/">
+          <img src="src/logo.png" className="logo" alt="Logo" />
+        </Link>
+        <div className="cent-menu">
+          <Link className="spinup-button" to="/spinup">Spinup</Link>
+          <Link className="pricing-button" to="/pricing">Pricing</Link>
+          <Link className="faq-button" to="/faq">FAQ</Link>
+          <Link className="contact-button" to="/contact">Contact</Link>
+        </div>
+        <Link className="login-button" to="/login">Login</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<div>Sigbet is rigged</div>} />
+        <Route path="/spinup" element={<Spinup />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App
