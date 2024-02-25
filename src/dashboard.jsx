@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import "./App.css";
+import Sidebar from "./Dashboard/Sidebar";
+import { Link } from "react-router-dom";
 
 function dashboard() {
     const [availableServers, setAvailableServers] = useState([{
@@ -15,8 +17,7 @@ function dashboard() {
         
     }])
     return  <>
-            <div className="dashboard-title">Dashboard</div>
-    
+                <Sidebar />
             <div className="gpu-container">
                 { availableServers.map(available => {
                     return (

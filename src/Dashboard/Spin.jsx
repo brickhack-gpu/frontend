@@ -1,30 +1,17 @@
 import React from "react";
 import { useState } from "react";
+import Sidebar from './Sidebar';
+import { Link } from "react-router-dom";
 
 function Spin() {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log('Full Name:', name);
-        console.log('Email Address:', email);
-        console.log('Message:', message);
-
-        setName('');
-        setEmail('');
-        setMessage('');
-    }
-
-
-
     return (
-        <body class="contactBody">
+      <>
+        <Sidebar />
+
         <form onSubmit={handleSubmit}>
           <div>
-            {/* <label class="contactLabel">Name:</label> */}
-            <input class="contactInput"
+            {/* <label className="contactLabel">Name:</label> */}
+            <input className="contactInput"
               type="text"
               value={name}
               placeholder="Name"
@@ -32,8 +19,8 @@ function Spin() {
             />
           </div>
           <div>
-          {/* <label class="contactLabel">Email:</label> */}
-            <input class="contactInput"
+          {/* <label className="contactLabel">Email:</label> */}
+            <input className="contactInput"
               type="email"
               value={email}
               placeholder="Email"
@@ -41,8 +28,8 @@ function Spin() {
             />
           </div>
           <div>
-            {/* <label class="contactLabel">Message:</label> */}
-            <input class="contactInput"
+            {/* <label className="contactLabel">Message:</label> */}
+            <input className="contactInput"
             type="message"
               value={message}
               placeholder="Enter message"
@@ -51,7 +38,8 @@ function Spin() {
           </div>
           <button type="submit">Submit</button>
         </form>
-        </body>
+        </>
+
       );
     }
 

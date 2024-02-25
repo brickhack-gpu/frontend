@@ -7,7 +7,7 @@ import Contact from "./contact";
 import Login from "./login"
 import Dashboard from "./dashboard"
 import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
-import Navbar from './Navbar';
+import Home from './home';
 import Billing from './Dashboard/Billing';
 import Spin from './Dashboard/Spin';
 
@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<div><Navbar />Sigbet is rigged</div>} />
+        <Route path="/" element={<Home />} />
         <Route path="/spinup" element={<Spinup />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/faq" element={<Faq />} />

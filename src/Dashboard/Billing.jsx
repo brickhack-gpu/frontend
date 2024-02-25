@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Sidebar from './Sidebar';
+import { Link } from "react-router-dom";
 
 function Billing() {
     const [name, setName] = useState('');
@@ -22,13 +23,12 @@ function Billing() {
 
     return (
       <>
-                <Sidebar />
+        <Sidebar />
 
-        <div class="contactBody">
         <form onSubmit={handleSubmit}>
           <div>
-            {/* <label class="contactLabel">Name:</label> */}
-            <input class="contactInput"
+            {/* <label className="contactLabel">Name:</label> */}
+            <input className="contactInput"
               type="text"
               value={name}
               placeholder="Name"
@@ -36,8 +36,8 @@ function Billing() {
             />
           </div>
           <div>
-          {/* <label class="contactLabel">Email:</label> */}
-            <input class="contactInput"
+          {/* <label className="contactLabel">Email:</label> */}
+            <input className="contactInput"
               type="email"
               value={email}
               placeholder="Email"
@@ -45,8 +45,8 @@ function Billing() {
             />
           </div>
           <div>
-            {/* <label class="contactLabel">Message:</label> */}
-            <input class="contactInput"
+            {/* <label className="contactLabel">Message:</label> */}
+            <input className="contactInput"
             type="message"
               value={message}
               placeholder="Enter message"
@@ -55,7 +55,6 @@ function Billing() {
           </div>
           <button type="submit">Submit</button>
         </form>
-        </div>
         </>
 
       );
