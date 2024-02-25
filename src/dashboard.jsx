@@ -50,14 +50,16 @@ function dashboard() {
                             </tr>
                         </thead>
                         <tbody>
-                            {purchases.map(purchase => {
+                            { purchases !== null ?
+                            purchases.map(purchase => {
                                 return (
                                     <tr key={purchase.id}>
                                         <th>{`$${purchase.amount}`}</th>
                                         <th>{purchase.createdAt}</th>
                                     </tr>
                                 );
-                            })}
+                            })
+                            : null }
                         </tbody>
                     </table>
                 </div>
@@ -70,14 +72,16 @@ function dashboard() {
                             </tr>
                         </thead>
                         <tbody>
-                            {deposits.map(deposit => {
+                            { deposits !== null ?
+                            deposits.map(deposit => {
                                 return (
                                     <tr key={deposit.id}>
                                         <th>{`$${deposit.amount}`}</th>
                                         <th>{deposit.createdAt}</th>
                                     </tr>
                                 );
-                            })}
+                            })
+                            : null}
                         </tbody>
                     </table>
                 </div>
@@ -93,7 +97,8 @@ function dashboard() {
                             </tr>
                         </thead>
                         <tbody>
-                            {servers.map(server => {
+                            { servers !== null ?
+                            servers.map(server => {
                                 return (
                                     <tr key={server.id} className="gpu">
                                         <th>{`${server.server_config.gpu_type} ${server.server_config.gpu_type}`}</th>
@@ -103,7 +108,8 @@ function dashboard() {
                                         <th><button onClick={() => { window.open(server.dns_link, '_blank') }}>Access</button></th>
                                     </tr>
                                 );
-                            })}
+                            })
+                            : null }
                         </tbody>
                     </table>
                 </div>
