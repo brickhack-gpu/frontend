@@ -1,59 +1,64 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
+import "./App.css";
 
-function Login() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+function login() {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
 
-    const handleLogin = () => {
-        // Handle login logic here
-    };
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log('Full Name:', name);
+        console.log('Email Address:', email);
+        console.log('Message:', message);
 
-    return (
-        <div>
-            <h2>Login</h2>
-            <input
-                type="email"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-            />
-            <input
-                type="password"
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-            />
-            <button onClick={handleLogin}>Login</button>
-        </div>
-    );
-}
+        setName('');
+        setEmail('');
+        setMessage('');
+    }
 
-function Register() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
 
-    const handleRegister = () => {
-        // Handle register logic here
-    };
 
     return (
-        <div>
-            <h2>Register</h2>
-            <input
-                type="email"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+        <form onSubmit={handleSubmit}>
+        `<div class="box">
+            <h1>Login</h1>
+          <div>
+            {/* <label class="contactLabel">Name:</label> */}
+            <input class="loginInput"
+              type="text"
+              value={name}
+              placeholder="Name"
+              onChange={(e) => setName(e.target.value)}
             />
-            <input
-                type="password"
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+          </div>
+          <div>
+          {/* <label class="contactLabel">Email:</label> */}
+            <input class="loginInput"
+              type="email"
+              value={email}
+              placeholder="Email"
+              onChange={(e) => setEmail(e.target.value)}
             />
-            <button onClick={handleRegister}>Register</button>
-        </div>
-    );
-}
+          </div>
+          <div>
+            {/* <label class="contactLabel">Message:</label> */}
+            <input class="loginInput"
+            type="password"
+              value={message}
+              placeholder="Password"
+              onChange={(e) => setMessage(e.target.value)}
+            />
+          </div>
+          <br />
+          <button type="submit">Login</button>
+          </div>
+        </form>
 
-export { Login, Register };
+      );
+    }
+
+
+export default login; 
+>>>>>>> 6fd44e0af135d341fb3df69780ca966c7e651db6
