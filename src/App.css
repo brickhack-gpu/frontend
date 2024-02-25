@@ -360,7 +360,7 @@ body {
   border-radius: 8px;
   margin: 0.5em;
   padding: 1em;
-  text-decoration: none; 
+  
 }
 
 .contact-button:hover, .pricing-button:hover, .faq-button:hover{
@@ -382,7 +382,6 @@ body {
   align-items: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.5); 
   transition: background-color 0.3s ease; 
-  text-decoration: none; 
 }
 
 
@@ -795,49 +794,32 @@ body {
 
 
 .sidebar {
-  background-color: #2a2a2a; /* Same dark theme as your dashboard */
-  width: 250px; /* Adjust width as needed */
-  height: 100vh; /* Full height */
-  position: fixed; /* Stay in place on scroll */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Align to top */
-  left: 0; /* Align to left */
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  background-color: #2a2a2a;
+  border: 1px solid rgb(255, 255, 255);
+  width: 250px; 
+  height: 100vh; 
+  position: fixed;
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  overflow-x: hidden; 
   padding-top: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Aligns the content space between */
-}
-
-
-.sidebar-signout {
-  color: white;
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: block; /* Will take the full width of the sidebar */
-  background-color: #2a2a2a; /* To match the sidebar background */
-}
-
-.sidebar-signout:hover {
-  color: red; /* Text color changes to red on hover */
-  background-color: #1a1a1a; /* Slightly lighter than the sidebar background */
+  font-size: 25px;
 }
 
 .sidebar-list {
-  list-style-type: none; /* Remove bullet points */
+  list-style-type: none; 
   margin: 0;
   padding: 0;
-  flex-grow: 1;
 }
 
 .sidebar-item {
   padding: 10px;
-  text-align: center; /* Center align the text */
+  text-align: center; 
 }
 
 .sidebar-link {
-  text-decoration: none; /* Remove underline from links */
+  text-decoration: none; 
   color: white; /* White text color */
   display: block; /* Display as block to fill the container */
   transition: 0.3s; /* Smooth transition for hover effects */
@@ -847,6 +829,19 @@ body {
   background-color: #1472b1; /* Light blue background on hover */
   padding: 10px 20px; /* Increase padding to make it stand out */
 }
+
+.signout {
+  text-decoration: none; 
+  color: white; /* White text color */
+  display: block; /* Display as block to fill the container */
+  transition: 0.3s; /* Smooth transition for hover effects */
+}
+
+.signout:hover {
+  background-color: #dd1010; /* Light blue background on hover */
+  padding: 10px 20px; /* Increase padding to make it stand out */
+}
+
 
 .fa-icon {
   margin-right: 10px; /* Space between icon and text */

@@ -11,21 +11,21 @@ function Sidebar() {
       <ul className="sidebar-list">
         <li className="sidebar-item">
           <Link to="/dashboard" className="sidebar-link">
-            <FontAwesomeIcon icon={faCheckSquare} /> Dashboard
+             Dashboard
           </Link>
         </li>
         <li className="sidebar-item">
           <Link to="/launch" className="sidebar-link">
-            <FontAwesomeIcon icon={faCoffee} /> Launch
+             Launch
           </Link>
         </li>
         <li className="sidebar-item">
           <Link to="/billing" className="sidebar-link">
-            <FontAwesomeIcon icon={faUser} /> Billing
+             Billing
           </Link>
         </li>
         <li className="sidebar-item">
-          <Link to="/" className="sidebar-signout sidebar-link">
+          <Link to="/" className="signout">
             Sign out
           </Link>
         </li>
