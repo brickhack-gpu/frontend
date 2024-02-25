@@ -1,7 +1,6 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import Sidebar from './Sidebar';
-import { Link } from "react-router-dom";
+
 
 function Billing() {
   const [billingInfo, setBillingInfo] = useState({
@@ -25,106 +24,22 @@ function Billing() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(billingInfo); 
+    console.log(billingInfo); // Replace with actual submit logic
   };
 
-
-    
   return (
     <>
-        <Sidebar />
-    <div className="billing">
-      <h2>Billing Information</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Full Name:
-          <input
-            type="text"
-            name="fullName"
-            value={billingInfo.fullName}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Address:
-          <input
-            type="text"
-            name="address"
-            value={billingInfo.address}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          City:
-          <input
-            type="text"
-            name="city"
-            value={billingInfo.city}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          State:
-          <input
-            type="text"
-            name="state"
-            value={billingInfo.state}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Zip:
-          <input
-            type="text"
-            name="zip"
-            value={billingInfo.zip}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Card Number:
-          <input
-            type="password"
-            name="cardNumber"
-            value={billingInfo.cardNumber}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Expiration:
-          <input
-            type="password"
-            name="expiration"
-            value={billingInfo.expiration}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          CVV:
-          <input
-            type="password"
-            name="cvv"
-            value={billingInfo.cvv}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  
+      <Sidebar />
+      <div className="billing-container">
+        <h2 className="billing-title">Billing Information</h2>
+        <form onSubmit={handleSubmit} className="billing-form">
+          {/* Form fields */}
+          {/* ... */}
+          <button type="submit" className="billing-button">Pay with Card</button>
+        </form>
+      </div>
+    </>
+  );
+}
 
-        </>
-
-      );
-    }
-
-
-export default Billing; 
+export default Billing;

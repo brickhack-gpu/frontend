@@ -332,6 +332,7 @@ body {
   z-index: 50;
   outline: 2px solid white;
   font-size: 20px;
+  text-decoration: none;
 }
 
 .logo {
@@ -359,6 +360,7 @@ body {
   border-radius: 8px;
   margin: 0.5em;
   padding: 1em;
+  text-decoration: none; 
 }
 
 .contact-button:hover, .pricing-button:hover, .faq-button:hover{
@@ -380,6 +382,7 @@ body {
   align-items: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.5); 
   transition: background-color 0.3s ease; 
+  text-decoration: none; 
 }
 
 
@@ -408,6 +411,8 @@ body {
   width: 100%;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  left: 100px;
 }
 
 .gpu {
@@ -689,34 +694,22 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 .box {
   padding: 0px 50px 50px 50px;
   border: 2px solid black;
   text-align: center;
-}
-
-.sidebar {
-  color:white;
-  list-style-type: none;
-  background-color: transparent;
-  width: 125px;
-  position: fixed;
-}
-
-.sidebutton {
-  color:white;
-  font-size: 25px;
-  background-color: transparent;
-}
-
-.billing {
-  color: black;
-  width: 400px;
-  margin: 2px;
-  border: 2px solid black;
-  position: fixed;
-  top: 33%;
-  left: 33%;
 }
 
 .link {
@@ -725,10 +718,10 @@ body {
 }
 
 .personal {
-  position: absolute;
+  position: fixed;
   left: 1300px;
   border: 2px solid black;
-  width: 100px;
+  width: 200px;
 }
 
 .grid-item {
@@ -737,7 +730,7 @@ body {
 }
 
 .grid-container {
-  position: absolute;
+  position: fixed;
   left: 200px;
   border: 2px solid black;
   width:300px;
@@ -749,3 +742,112 @@ body {
   background-color: transparent;
 }
 
+.billing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Fill the entire viewport height */
+}
+
+.billing-title {
+  color: var(--white);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.billing-form {
+  background-color: rgba(90, 90, 90, 0.5); /* Semi-transparent background */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 10px 20px 40px rgba(0,0,0,0.6);
+  width: 100%;
+  max-width: 400px; /* Adjust the width as necessary */
+}
+
+.billing-form input {
+  background-color: transparent;
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  color: var(--white);
+  margin-bottom: 1rem;
+  padding: 10px;
+  width: 100%; /* Full width minus padding */
+  box-sizing: border-box;
+}
+
+.billing-button {
+  background-color: var(--lblue);
+  color: var(--white);
+  border: none;
+  padding: 10px 30px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.billing-button:hover {
+  background-color: #93c1e263; /* Adjust hover color as needed */
+}
+
+
+.sidebar {
+  background-color: #2a2a2a; /* Same dark theme as your dashboard */
+  width: 250px; /* Adjust width as needed */
+  height: 100vh; /* Full height */
+  position: fixed; /* Stay in place on scroll */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Aligns the content space between */
+}
+
+
+.sidebar-signout {
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: block; /* Will take the full width of the sidebar */
+  background-color: #2a2a2a; /* To match the sidebar background */
+}
+
+.sidebar-signout:hover {
+  color: red; /* Text color changes to red on hover */
+  background-color: #1a1a1a; /* Slightly lighter than the sidebar background */
+}
+
+.sidebar-list {
+  list-style-type: none; /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+}
+
+.sidebar-item {
+  padding: 10px;
+  text-align: center; /* Center align the text */
+}
+
+.sidebar-link {
+  text-decoration: none; /* Remove underline from links */
+  color: white; /* White text color */
+  display: block; /* Display as block to fill the container */
+  transition: 0.3s; /* Smooth transition for hover effects */
+}
+
+.sidebar-link:hover {
+  background-color: #1472b1; /* Light blue background on hover */
+  padding: 10px 20px; /* Increase padding to make it stand out */
+}
+
+.fa-icon {
+  margin-right: 10px; /* Space between icon and text */
+}
