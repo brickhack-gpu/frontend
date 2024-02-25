@@ -4,7 +4,7 @@ export default function Navbar() {
     return (
       <nav className="navbar">
         <Link className="logo-link" to="/">
-          <img src="public\botl.png" className="logo" alt="Logo" />
+          <img src="public\fiunainfainfnajfnaifnaskofbafbosfbkfsablkfbaslkf.png" className="logo" alt="Logo" />
         </Link>
         <div className="cent-menu">
           {/* <Link className="spinup-button" to="/spinup">Spinup</Link> */}
