@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom"
+import logo from '../public/fiunainfainfnajfnaifnaskofbafbosfbkfsablkfbaslkf.png';
 
 export default function Navbar() {
     return (
       <nav className="navbar">
         <Link className="logo-link" to="/">
-          <img src="public\fiunainfainfnajfnaifnaskofbafbosfbkfsablkfbaslkf.png" className="logo" alt="Logo" />
+          <img src={logo} className="logo" alt="Logo" />
         </Link>
         <div className="cent-menu">
           {/* <Link className="spinup-button" to="/spinup">Spinup</Link> */}

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Sidebar from './Sidebar';
-import { AuthGet } from "../API";
+import { AuthGet, AuthPost } from "../API";
 import sd from '../../public/sd.webp';
 import pytorch from '../../public/pytorch.png';
 import tensorflow from '../../public/tensorflow.png';
@@ -15,10 +15,10 @@ function Spin() {
 
     async function deploy() {
         try {
-            await AuthPost('/servers/create', {
+            await AuthPost('/servers/start', {
                 template_id: 1,
                 server_config_id: 1,
-                storage,
+                storage: parseInt(storage),
             });
 
             window.location.href='/dashboard';
@@ -92,20 +92,32 @@ function Spin() {
                     '             <div className="bet_modal">
                         <span class="close" onClick={() => { setModal(false) }}>&times;</span>
                         <div onClick={deploy} className="kokinda">
-                            <img src={sd} />
+                            <div>
+                            <h1>Stable Diffusion</h1>
                             <p>This lightning fast model, developed by StabilityLabs and based on SDXL, is capable of generating image-based results as fast as you can type. </p>
+                            </div>
+                            <img src={sd} />
                         </div>
                         <div className="kokinda disabled">
-                            <img src={juypter} />
+                            <div>
+                            <h1>Juypter Notebook</h1>
                             <p>JupyterLab is the latest web-based interactive development environment for notebooks, code, and data. Its flexible interface allows users to configure and arrange workflows in data science, scientific computing, computational journalism, and machine learning. A modular design invites extensions to expand and enrich functionality.</p>
+                </div>
+                            <img src={juypter} />
                         </div>
                         <div className="kokinda disabled">
-                            <img src={pytorch} />
+                            <div>
+                            <h1>PyTorch</h1>
                             <p>Transition seamlessly between eager and graph modes with TorchScript, and accelerate the path to production with TorchServe.</p>
+                </div>
+                            <img src={pytorch} />
                         </div>
                         <div className="kokinda disabled">
-                            <img src={tensorflow} />
+                            <div>
+                            <h1>Tensorflow</h1>
                             <p>Create production-grade machine learning models with TensorFlow</p>
+                </div>
+                            <img src={tensorflow} />
                         </div>
                     </div>
                 </div>

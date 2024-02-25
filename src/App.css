@@ -35,7 +35,7 @@ body {
 }
 
 .bet_modal {
-    margin: 15% auto;
+    margin: 5% auto;
     padding: 20px;
     border: 1px solid #000;
     width: 30%;
@@ -49,7 +49,14 @@ body {
 }
 
 .error {
-    color: red;
+    color: white;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 30px;
+    font-size: 1.5em;
+    background-color: red;
 }
 
 * {
@@ -477,8 +484,8 @@ body {
 }
 
 .disabled {
-    background-color: rgba(0,0,0,0.4);
     opacity: 0.3;
+    pointer: crosshair !important;
 }
 
 .disabled button {
@@ -540,6 +547,18 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
+.danger-button{
+  background-color: rgba(255, 0, 0, 0.75);
+  color: var(--white);
+  border: none;
+  padding: 10px 30px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
 
 .login1-button {
   background-color: var(--lblue);
@@ -566,7 +585,7 @@ body {
 }
 
 .kokinda img {
-    width: 100px;
+    height: 125px;
     flex-direction: flex-start;
 }
 
@@ -886,6 +905,11 @@ input[type="password"] {
   background-color: #93c1e263; /* Adjust hover color as needed */
 }
 
+.sidebar img {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
 
 .sidebar {
   background-color: #2a2a2a;
@@ -944,6 +968,18 @@ input[type="password"] {
     padding: 1em;
     border-radius: 10px;
 }
+.deposits table {
+    width: 100%;
+}
+.deposits th {
+    border-bottom: 1px solid black;
+}
+.purchases th {
+    border-bottom: 1px solid black;
+}
+.purchases table {
+    width: 100%;
+}
 .purchases {
     grid-area: purchases;
     background-color: white;
@@ -965,11 +1001,12 @@ input[type="password"] {
 .sidebar-list {
   list-style-type: none;
   margin: 0;
+  margin-top: 100px;
   padding: 0;
 }
 
 .sidebar-item {
-  padding: 10px;
+  padding: 20px;
   text-align: center;
 }
 
@@ -982,7 +1019,7 @@ input[type="password"] {
 
 .sidebar-link:hover {
   background-color: #1472b1; /* Light blue background on hover */
-  padding: 10px 20px; /* Increase padding to make it stand out */
+  padding: 10px 30px; /* Increase padding to make it stand out */
 }
 
 .signout {

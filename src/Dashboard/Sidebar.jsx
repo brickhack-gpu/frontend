@@ -2,12 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckSquare, faCoffee, faUser } from '@fortawesome/free-solid-svg-icons';
-
+import logo from '../../public/fiunainfainfnajfnaifnaskofbafbosfbkfsablkfbaslkf.png';
 
 function Sidebar() {
   // No need for click handlers if you're using Link components
   return (
     <div className="sidebar">
+      <img src={logo} />
       <ul className="sidebar-list">
         <li className="sidebar-item">
           <Link to="/dashboard" className="sidebar-link">

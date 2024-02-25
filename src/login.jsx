@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./App.css";
 import Navbar from "./Navbar";
 import { PostLogin, PostRegister } from './API.js';
+import logo from '../public/fiunainfainfnajfnaifnaskofbafbosfbkfsablkfbaslkf.png';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -41,7 +42,7 @@ function Login() {
       <Navbar />
       <div className="login1-container">
         <form className="login1-form">
-        <img src="public/fiunainfainfnajfnaifnaskofbafbosfbkfsablkfbaslkf.png" className="logo123" alt="Logo" />
+        <img src={logo} className="logo123" alt="Logo" />
         { error ? <p className="error">{error}</p> : null }
           <input
             className="login12-input"
