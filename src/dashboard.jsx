@@ -18,7 +18,15 @@ function dashboard() {
     }])
     return  <>
                 <Sidebar />
+                
+    
             <div className="gpu-container">
+            <div className="gpu gpu-header">
+                            <p>GPU</p>
+                            <b>Price</b>
+                            <p>Region</p>
+                            <p>Max Available</p>
+                        </div>
                 { availableServers.map(available => {
                     return (
                         <div className="gpu">
