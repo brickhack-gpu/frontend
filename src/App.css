@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 body {
   background-image: url("/endless-constellation.png");
 }
 
 * {
-  font-family: 'Vayu Sans';
+  font-family: "League Spartan", sans-serif;
 }
 
 :root {
@@ -22,8 +24,12 @@ body {
 }
 
 #section1 .light-blue {
-  color: var(--lblue);
-  text-shadow: 0 0 20px var(--lblue);
+  color: #fff; /* The color of the text itself */
+  text-shadow: 
+    0 0 5px #7daff0, /* Small light blue glow */
+    0 0 10px #7daff0, /* Medium light blue glow */
+    0 0 30px var(--lblue), /* Soft outermost light blue glow */
+    0 0 35px var(--lblue); /* Soft outermost light blue glow */
   font-size: 80px;
 }
 
@@ -35,13 +41,18 @@ body {
 #section1 .WE {
   color: var(--white);
   font-size: 30px;
+  text-shadow:
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
 }
 
 #section1 .sub1 {
   display: inline-block;
   background-color: rgba(90, 90, 90, 0.5);
   padding: 40px;
-  margin-top: 20px;
+  margin-top: 100px;
   margin-bottom: 140px;
   text-align: center;
   border-radius: 10px; 
@@ -50,8 +61,9 @@ body {
 
 
 #section1 .button1 {
+  outline: 2px solid var(--lblue);
+  background-color: transparent;
   color: var(--white); /* Change the text color to white */
-  background-color: var(--lblue); /* Set the background color to the --blue variable */
   border: none; /* Remove the border */
   padding: 10px 30px; /* Add some padding */
   font-size: 1.25em; /* Set the font size */
@@ -62,7 +74,7 @@ body {
 }
 
 #section1 .button1:hover {
-  background-color: var(--blue);
+  background-color: #93c1e263;
   color: var(--white); 
   
 }
@@ -72,7 +84,11 @@ body {
   font-size: 20px;
   margin-bottom: 20px;
   padding: 10px;
-
+  text-shadow:
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
 }
 
 .logospace img {
@@ -88,12 +104,6 @@ body {
   text-align: center;
 }
 
-#section1 .gray-box {
-  width: 200px;
-  height: 100px;
-  background-color: var(--grey);
-  margin-top: 20px;
-}
 
 #section2 {
   display: flex;
@@ -103,21 +113,192 @@ body {
   text-align: center;
 }
 
-#section2 h2 {
-  font-size: 48px;
-  color: var(--dblue);
+#section2 .WE {
+  color: var(--white);
+  font-size: 30px;
 }
 
-#section2 .gray-box {
-  width: 200px;
-  height: 100px;
-  background-color: var(--grey);
-  margin-top: 20px;
+#section2 .ME {
+  color: #fff; /* The color of the text itself */
+  text-shadow: 
+    0 0 5px #7daff0, /* Small light blue glow */
+    0 0 10px #7daff0, /* Medium light blue glow */
+    0 0 30px var(--lblue), /* Soft outermost light blue glow */
+    0 0 35px var(--lblue); /* Soft outermost light blue glow */
+  font-size: 60px;
   
 }
-#section3 {
-  background-color: purple;
+
+#section2 .sub1 {
+  display: inline-block;
+  background-color: rgba(90, 90, 90, 0.5);
+  padding: 30px;
+  margin-bottom: 120px;
+  text-align: center;
+  border-radius: 15px; 
+  box-shadow: 10px 20px 40px rgba(0,0,0,0.6);
 }
+
+
+#section2 .button1 {
+  outline: 2px solid var(--lblue);
+  background-color: transparent;
+  color: var(--white); /* Change the text color to white */
+  border: none; /* Remove the border */
+  padding: 10px 30px; /* Add some padding */
+  font-size: 1.25em; /* Set the font size */
+  cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+  border-radius: 5px; /* Optionally round the corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Add a subtle shadow */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#section2 .button1:hover {
+  background-color: #93c1e263;
+  color: var(--white); 
+}
+
+#section2 .delop {
+  text-shadow: 4px 6px 6px rgba(0, 0, 0, 20);
+  color: white;
+  margin-bottom: 120px;
+  margin-top: 100px;
+}
+
+.prices {
+  text-shadow: 4px 6px 6px rgba(0, 0, 0, 20);
+  color: white;
+}
+
+.gpuu11 {
+  position: relative; /* Position relative to its normal position */
+  width: 100vw; /* Span the full width of the viewport */
+  height: auto; /* Height is set to auto to maintain the aspect ratio of content */
+  overflow: hidden; /* Hide the overflow to remove the scrollbar */
+  white-space: nowrap; /* Keep all items in a single line */
+  z-index: 1; /* Set z-index to 1 or more if needed to layer correctly */
+}
+
+.gpuu11 img {
+  width: 14.28vw; /* Each image will be 1/7th of the viewport width */
+  height: auto; /* Maintain the aspect ratio */
+  display: inline-block; /* Align images in a line */
+}
+
+.gpu-table {
+  background-color: rgba(90, 90, 90, 0.5);
+  border-radius: 10px;
+  padding: 40px;
+  color: var(--white);
+  max-width: 600px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px; 
+  box-shadow: 10px 20px 40px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.gpu-table ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.gpu-item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Divide each item into three columns */
+  align-items: center;
+  text-align: center; /* Center the text */
+  border-bottom: 1px solid #444;
+  padding: 20px 0;
+}
+.gpu-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 90%; /* Length of the separator line */
+  height: 1px;
+  background-color: #444; /* Color of the separator line */
+}
+
+.gpu-header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-weight: bold;
+  margin-bottom: 20px; /* Space between header and items */
+  font-size: 40px;
+}
+
+.gpu-name {
+  font-weight: bold;
+}
+
+.gpu-main {
+  font-size: 20px;
+}
+
+.gpu-price {
+  color: #fff; /* The color of the text itself */
+  text-shadow: 
+    0 0 5px #7daff0, /* Small light blue glow */
+    0 0 10px #7daff0, /* Medium light blue glow */
+    0 0 30px var(--lblue), /* Soft outermost light blue glow */
+    0 0 35px var(--lblue); /* Soft outermost light blue glow */
+}
+
+.gpu-table-button {
+  display: block;
+  width: 100%;
+  padding: 15px; /* Increased padding */
+  margin-top: 30px; /* Increased margin */
+  background-color: transparent;
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  font-size: 18px; /* Increased font size */
+  cursor: pointer;
+  outline: 2px solid var(--lblue);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Add a subtle shadow */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.gpu-table-button:hover {
+  background-color: #93c1e263;
+  color: var(--white); 
+}
+
+.prices {
+  color: white;
+  padding: 100px 100px;
+}
+
+
+
+#section3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack children vertically */
+  height: 100vh; /* Use the full height of the viewport */
+}
+
+.gpu-table-container {
+  display: flex;
+  flex-direction: column; /* Stack table and button vertically */
+  align-items: center; /* Center align the items */
+}
+
+
 #root {
   /* max-width: 1280px; */
   margin: 0 auto;
@@ -185,7 +366,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Add a subtle shadow */
+  transition: background-color 0.3s ease; 
 }
+
 
 .login-button:hover {
   filter: brightness(80%);
@@ -247,12 +431,17 @@ body {
 .sidebar {
   color:white;
   list-style-type: none;
-  background-color: black;
-  margin: 50px;
-  width: 500px;
+  background-color: transparent;
+  width: 125px;
   position: fixed;
-  top: 0;
-  left: 0;
+  text-align: left;
+  top: 50px;
+  left: 30px;
+}
+
+.sidebutton {
+  color:white;
+  background-color: transparent;
 }
 
 .billing {
@@ -266,8 +455,8 @@ body {
 }
 
 .link {
-  margin-bottom:50px;
-
+  margin-bottom:100px;
+  list-style: none;
 }
 
 
