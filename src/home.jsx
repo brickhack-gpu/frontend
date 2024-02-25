@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 function home() {
     return ( 
         <>
+        
         <Navbar />
         
         <div className="section" id="section1">
@@ -11,10 +12,10 @@ function home() {
                 <h1 className="highlighted-text">
                 <span className="light-blue">Simple </span> 
                 <span className="white">and </span> 
-                <span className="light-blue">No Bullshit</span>
+                <span className="light-blue">Efficient</span>
                 </h1>
                 <h2 className="WE">Run high-powered AI models without the hassel or the monthly subscription.</h2>
-                <button className="button1">Spin-Up</button>
+                <button className="button1" onClick={() => {window.location.href='/login'}}>Spin-up</button> 
             </div>
             <div className="intag">
                 <h2>Compatablility With</h2>
@@ -30,7 +31,7 @@ function home() {
             <div className="sub1">
                 <h1 className="ME">Pay as you go.</h1>
                 <h2 className="WE">Instances are billed by the hour. When you're done using or training a model, you're done paying.</h2>
-                <button className="button1">Sign Up</button>
+                <button className="button1" onClick={() => {window.location.href='/login'}}>Sign Up</button> 
             </div>
         
             <h1 className="prices">Simple interface for novices and rich features for powerusers.</h1>
@@ -82,7 +83,7 @@ function home() {
                  <span className="gpu-price">$0.79 / hr</span>
                 </li>
             </ul>
-            <button className="gpu-table-button">See Pricing</button>
+            <button className="gpu-table-button" onClick={() => {window.location.href='/pricing'}}>See Pricing</button>
         </div>
   
 
