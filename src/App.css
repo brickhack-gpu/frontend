@@ -81,7 +81,13 @@
   margin: 3px;
 }
 
-
+.hansonSidebar {
+  width: 30vw;
+  background-color: white !important;
+  position: fixed;
+  left: 1em;
+  top: 1em;
+}
 
 .box {
   padding: 0px 50px 50px 50px;

@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import "./AppB.css";
 
 function Model() {
     const [name, setName] = useState('');

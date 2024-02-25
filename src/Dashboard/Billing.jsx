@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import "./AppB.css";
+import Sidebar from './Sidebar';
 
-function Details() {
+function Billing() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
@@ -21,7 +21,10 @@ function Details() {
 
 
     return (
-        <body class="contactBody">
+      <>
+                <Sidebar />
+
+        <div class="contactBody">
         <form onSubmit={handleSubmit}>
           <div>
             {/* <label class="contactLabel">Name:</label> */}
@@ -52,9 +55,11 @@ function Details() {
           </div>
           <button type="submit">Submit</button>
         </form>
-        </body>
+        </div>
+        </>
+
       );
     }
 
 
-export default Details; 
+export default Billing; 

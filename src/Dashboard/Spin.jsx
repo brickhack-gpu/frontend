@@ -1,8 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import "./AppB.css";
 
-function Gpu() {
+function Spin() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
@@ -57,4 +56,4 @@ function Gpu() {
     }
 
 
-export default Gpu; 
+export default Spin; 
