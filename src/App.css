@@ -428,7 +428,7 @@ body {
 
 .gpu {
   background: var(--grey);
-  border-radius: 30px;
+  border-radius: 10px;
   padding: 10px 40px;
   margin: 10px 0;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -436,6 +436,7 @@ body {
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  color: var(--white);
   width: 70%;
 }
 
@@ -823,15 +824,69 @@ input[type="password"] {
 .sidebar {
   background-color: #2a2a2a;
   border: 1px solid rgb(255, 255, 255);
-  width: 250px;
-  height: 100vh;
-  position: fixed;
+  width: 25%;
+  position: relative;
+  height: 95vh;
   z-index: 1;
   top: 0;
   left: 0;
   overflow-x: hidden;
   padding-top: 20px;
   font-size: 25px;
+}
+
+.dash {
+    display: flex;
+    max-height: 100%;
+}
+
+.dashcontent {
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+.dashmain {
+    display: grid;
+    grid-template-areas: ". stats . . . . transactions ."
+    "gpu gpu gpu gpu gpu gpu gpu gpu"
+    "gpu gpu gpu gpu gpu gpu gpu gpu"
+    "gpu gpu gpu gpu gpu gpu gpu gpu"
+    "gpu gpu gpu gpu gpu gpu gpu gpu"
+    "gpu gpu gpu gpu gpu gpu gpu gpu"
+    "gpu gpu gpu gpu gpu gpu gpu gpu"
+    "gpu gpu gpu gpu gpu gpu gpu gpu"
+    "gpu gpu gpu gpu gpu gpu gpu gpu"
+    "gpu gpu gpu gpu gpu gpu gpu gpu";
+    width: 100%;
+    height: 100%;
+}
+
+.stats {
+    grid-area: stats;
+    background-color: white;
+    padding: 1em;
+    border-radius: 10px;
+}
+.transactions {
+    grid-area: transactions;
+    background-color: white;
+    padding: 1em;
+    border-radius: 10px;
+}
+.gpu-container {
+    grid-area: gpu;
+    width: 100%;
+}
+
+.gpu-container table {
+    width: 100%;
+}
+.gpu-container table * {
+    width: 95%;
 }
 
 .sidebar-list {
