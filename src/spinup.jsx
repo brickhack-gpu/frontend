@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import "./App.css";
+import Navbar from "./Navbar";
 
-function dashboard() {
+function spinup() {
     const [availableServers, setAvailableServers] = useState([{
         type: 'GTX-3600',
         count: 5,
@@ -14,7 +15,8 @@ function dashboard() {
         price: 0.65,
         
     }])
-    return  <>
+    return ( <>
+            <Navbar />
             <div className="Spinup-title">Spin-up</div>
     
             <div className="gpu-container">
@@ -29,7 +31,8 @@ function dashboard() {
                     );
                 })}
             </div>
-    </>
-}
+    </> 
+    )
 
-export default dashboard;
+} 
+export default spinup;

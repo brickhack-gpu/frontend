@@ -43,6 +43,11 @@ body{
   padding-left: 2em;
 }
 
+.logo:hover {
+  filter: brightness 50%;
+}
+
+
 .cent-menu {
   display: flex;
   justify-content: center;
@@ -101,5 +106,31 @@ body{
   align-items: center;
   text-align: center;
   width: 70%;
+}
+
+
+/* //hanson */
+
+.contactInput .loginInput{
+  padding: 3px;
+  margin: 3px;
+}
+
+.contactInput:hover .loginInput:hover{
+  cursor: pointer;
+  padding: 3px;
+  margin: 3px;
+}
+
+
+
+.box {
+  padding: 0px 50px 50px 50px;
+  border: 2px solid black;
+  text-align: center;
+}
+
+* {
+  background-color: transparent;
 }
 
