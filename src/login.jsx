@@ -3,64 +3,48 @@ import { useState } from "react";
 import "./App.css";
 import Navbar from "./Navbar";
 
-function login() {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
+function Login() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log('Full Name:', name);
-        console.log('Email Address:', email);
-        console.log('Message:', message);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log('Name:', name);
+    console.log('Email:', email);
+    console.log('Password:', password);
 
-        setName('');
-        setEmail('');
-        setMessage('');
-    }
+    // Clear the form (If you want to clear the form after submit)
+    setName('');
+    setEmail('');
+    setPassword('');
+  }
 
-
-
-    return (
-        <>
-        <Navbar />
-        <form onSubmit={handleSubmit}>
-        `<div class="box">
-            <h1>Login</h1>
-          <div>
-            {/* <label class="contactLabel">Name:</label> */}
-            <input class="loginInput"
-              type="text"
-              value={name}
-              placeholder="Name"
-              onChange={(e) => setName(e.target.value)}
-            />
-          </div>
-          <div>
-          {/* <label class="contactLabel">Email:</label> */}
-            <input class="loginInput"
-              type="email"
-              value={email}
-              placeholder="Email"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div>
-            {/* <label class="contactLabel">Message:</label> */}
-            <input class="loginInput"
+  return (
+    <>
+      <Navbar />
+      <div className="login1-container">
+        <form onSubmit={handleSubmit} className="login1-form">
+        <img src="public\unboltedfinl.png" className="logo123" alt="Logo" />
+          <input 
+            className="login12-input"
+            type="email"
+            value={email}
+            placeholder="Email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input 
+            className="login1-input"
             type="password"
-              value={message}
-              placeholder="Password"
-              onChange={(e) => setMessage(e.target.value)}
-            />
-          </div>
-          <br />
-          <button type="submit">Login</button>
-          </div>
+            value={password}
+            placeholder="Password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button type="submit" className="login1-button">Login</button>
         </form>
-        </>
-      );
-    }
+      </div>
+    </>
+  );
+}
 
-
-export default login; 
+export default Login;
