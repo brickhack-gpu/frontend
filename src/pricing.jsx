@@ -32,7 +32,7 @@ function Pricing() {
               <span className="gpu-name">{gpu.name}</span>
               <span className="gpu-memory">{gpu.memory}</span>
               <span className="gpu-price">{gpu.price}</span>
-              <button className="spin-button" onClick={() => handleSpin(gpu.name)}>Spin it</button>
+              <button className="spin-button" onClick={() => {window.location.href='/login'}}>Spin it</button>
             </div>
           ))}
         </div>
