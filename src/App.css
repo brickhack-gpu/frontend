@@ -1,7 +1,10 @@
 .colors {
   color: #114084 #3466aa #82b7dc #F1F1F1 #444444#1C1C1C;
 }
-
+body{
+  background: rgb(0,0,0);
+  background: linear-gradient(170deg, rgba(0,0,0,1) 0%, rgba(30,30,98,1) 77%, rgba(19,28,149,1) 97%);
+}
 * {
   font-family: 'Times New Roman', Times, serif
 }
@@ -58,19 +61,45 @@
   color:white
 }
 
-
 .login-button {
   color: white;
-  background: linear-gradient(to right, #3466aa, #3466aa);
+  background: linear-gradient(to right,  #3466aa, #3466aa);
   border-radius: 8px;
   margin: 0.5em;
   padding: 1em; 
 }
 
 .login-button:hover {
-  transform: scale(1.1);
+  filter: brightness(80%);
   color: white;
 }
 
+#root {
+  width: 100%;
+}
 
+.gpu-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  color: var(--white);
+  background-color: #fff;
+  border-radius: 10px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.gpu {
+  background: var(--grey);
+  border-radius: 30px; 
+  padding: 10px 40px; 
+  margin: 10px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  text-align: center;
+  width: 70%;
+}
 

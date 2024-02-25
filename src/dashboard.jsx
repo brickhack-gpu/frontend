@@ -4,12 +4,12 @@ import "./App.css";
 function dashboard() {
     const [availableServers, setAvailableServers] = useState([{
         type: 'GTX-3600',
-        count: 5 + " available",
+        count: 5,
         region: 'United States',
         price: 0.22,
     }, {
         type: 'GTX-4090',
-        count: 3 + " available",
+        count: 3,
         region: 'Canada',
         price: 0.65,
         
@@ -24,7 +24,7 @@ function dashboard() {
                             <p>{available.type}</p>
                             <b>{`$${available.price}/h`}</b>
                             <p>{available.region}</p>
-                            <p>{available.count}</p>
+                            <p>{`${available.count}available`}</p>
                         </div>
                     );
                 })}

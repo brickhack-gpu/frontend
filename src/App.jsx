@@ -4,7 +4,7 @@ import Spinup from "./spinup";
 import Pricing from "./pricing";
 import Faq from "./faq";
 import Contact from "./contact";
-import { Login, Register } from "./login"
+import Login from "./login"
 import Dashboard from "./dashboard"
 import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
 
