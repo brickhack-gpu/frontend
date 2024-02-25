@@ -851,16 +851,17 @@ input[type="password"] {
 
 .dashmain {
     display: grid;
-    grid-template-areas: ". stats . . . . transactions ."
-    "gpu gpu gpu gpu gpu gpu gpu gpu"
-    "gpu gpu gpu gpu gpu gpu gpu gpu"
-    "gpu gpu gpu gpu gpu gpu gpu gpu"
-    "gpu gpu gpu gpu gpu gpu gpu gpu"
-    "gpu gpu gpu gpu gpu gpu gpu gpu"
-    "gpu gpu gpu gpu gpu gpu gpu gpu"
-    "gpu gpu gpu gpu gpu gpu gpu gpu"
-    "gpu gpu gpu gpu gpu gpu gpu gpu"
-    "gpu gpu gpu gpu gpu gpu gpu gpu";
+    grid-template-areas: ". stats . purchases . transactions ."
+    ". . . . . . ."
+    "gpu gpu gpu gpu gpu gpu gpu"
+    "gpu gpu gpu gpu gpu gpu gpu"
+    "gpu gpu gpu gpu gpu gpu gpu"
+    "gpu gpu gpu gpu gpu gpu gpu"
+    "gpu gpu gpu gpu gpu gpu gpu"
+    "gpu gpu gpu gpu gpu gpu gpu"
+    "gpu gpu gpu gpu gpu gpu gpu"
+    "gpu gpu gpu gpu gpu gpu gpu"
+    "gpu gpu gpu gpu gpu gpu gpu";
     width: 100%;
     height: 100%;
 }
@@ -871,8 +872,14 @@ input[type="password"] {
     padding: 1em;
     border-radius: 10px;
 }
-.transactions {
+.deposits {
     grid-area: transactions;
+    background-color: white;
+    padding: 1em;
+    border-radius: 10px;
+}
+.purchases {
+    grid-area: purchases;
     background-color: white;
     padding: 1em;
     border-radius: 10px;
