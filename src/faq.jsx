@@ -31,8 +31,8 @@ function FAQ() {
         <div className="faq-container">
           <h1 className="faq-title">Frequently Asked Questions</h1>
           {faqs.map((faq, index) => (
-            <div className="faq-item" key={index}>
-              <div className="faq-question" onClick={() => toggleFAQ(index)}>
+            <div className="faq-item" key={index} onClick={() => toggleFAQ(index)}>
+              <div className="faq-question">
                 {faq.question}
               </div>
               <div className={`faq-answer ${activeIndex === index ? 'active' : ''}`}>

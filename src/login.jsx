@@ -25,7 +25,7 @@ function Login() {
       <Navbar />
       <div className="login1-container">
         <form onSubmit={handleSubmit} className="login1-form">
-        <img src="public\unboltedfinl.png" className="logo123" alt="Logo" />
+        <img src="public\botl.png" className="logo123" alt="Logo" />
           <input 
             className="login12-input"
             type="email"

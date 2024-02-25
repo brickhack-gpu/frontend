@@ -15,8 +15,8 @@ function Sidebar() {
           </Link>
         </li>
         <li className="sidebar-item">
-          <Link to="/launch" className="sidebar-link">
-             Launch
+          <Link to="/spin" className="sidebar-link">
+             Spin
           </Link>
         </li>
         <li className="sidebar-item">

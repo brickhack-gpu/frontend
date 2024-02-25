@@ -9,15 +9,15 @@ function home() {
         <div className="section" id="section1">
             <div className="sub1">
                 <h1 className="highlighted-text">
-                <span className="light-blue">"Easy </span> 
+                <span className="light-blue">Simple </span> 
                 <span className="white">and </span> 
-                <span className="light-blue">Simple"</span>
+                <span className="light-blue">No Bullshit</span>
                 </h1>
-                <h2 className="WE">We streamline the setup of your GPU server for a seamless and effortless experience</h2>
+                <h2 className="WE">Run high-powered AI models without the hassel or the monthly subscription.</h2>
                 <button className="button1">Spin-Up</button>
             </div>
             <div className="intag">
-                <h2>Compatablility...</h2>
+                <h2>Compatablility With</h2>
                 <div className="logospace">
                 <img src="public\tensor-flow-logo.avif" alt="tensorflow" />
                 <img src="public\pytorch-logo.avif" alt="pytorch" />
@@ -28,12 +28,12 @@ function home() {
         </div>
         <div className="section" id="section2">
             <div className="sub1">
-                <h1 className="ME"> Accessibility </h1>
-                <h2 className="WE">We believe everybody should have the oppertunity to spin up a sever and train, no matter the expirence or budget</h2>
-                <button className="button1">Start Spinning</button>
+                <h1 className="ME">Pay as you go.</h1>
+                <h2 className="WE">Instances are billed by the hour. When you're done using or training a model, you're done paying.</h2>
+                <button className="button1">Sign Up</button>
             </div>
         
-            <h1 className="delop">Develop, train, and scale. All in one place...</h1>
+            <h1 className="prices">Simple interface for novices and rich features for powerusers.</h1>
 
             <div className="gpuu11">
                 {/* Repeat the image 7 times */}
@@ -47,7 +47,7 @@ function home() {
 
 
         <div className="section" id="section3">
-            <h1 className="prices">These prices are nothing like you've seen before...</h1>
+            <h1 className="prices">Competitive hourly pricing. </h1>
              <div className="gpu-table">
             <ul>
             <li className="gpu-item">
