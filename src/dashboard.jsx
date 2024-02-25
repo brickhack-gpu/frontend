@@ -19,10 +19,10 @@ function dashboard() {
         
     }])
 
-    const [storage, setStorage] = useState([{
-        VM: "0/3",
-        HRate: "$0.47",
-        StorageUsed: "133.26B",
+    const [personal, setPersonal] = useState([{
+        VMs: "0/3",
+        HRate: 0.47,
+        StorageUsed: 133.26,
     }])
     return  <>
                 <Sidebar />
@@ -48,6 +48,24 @@ function dashboard() {
                     );
                 })}
             </div>
+            <div className="personal-stats">
+            <div className="personal">
+                            <p>Active VMs:</p>
+                            <b>Hourly Rate:</b>
+                            <p>Storage Used:</p>
+                        </div>
+                        { personal.map(available => {
+                    return (
+                        <div className="personalpersonal">
+                            <p>{personal.VMs}</p>
+                            <p>{`$${personal.HRate}`}</p>
+                            <p>{`${personal.StorageUsed}B`}</p>
+                        </div>
+                    );
+                })}
+
+                </div>
+            <div>
     </>
 }
 

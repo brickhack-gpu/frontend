@@ -169,20 +169,21 @@ body {
   text-shadow: 4px 6px 6px rgba(0, 0, 0, 20);
   color: white;
 }
-
 .gpuu11 {
-  position: relative; /* Position relative to its normal position */
-  width: 100vw; /* Span the full width of the viewport */
-  height: auto; /* Height is set to auto to maintain the aspect ratio of content */
-  overflow: hidden; /* Hide the overflow to remove the scrollbar */
-  white-space: nowrap; /* Keep all items in a single line */
-  z-index: 1; /* Set z-index to 1 or more if needed to layer correctly */
+  position: relative;
+  width: 100vw;
+  height: auto;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 1;
+  background-color: rgba(90, 90, 90, 0.5); /* Add gray background color */
+  box-sizing: border-box; /* Include padding in the width calculation */
 }
 
 .gpuu11 img {
-  width: 14.28vw; /* Each image will be 1/7th of the viewport width */
-  height: auto; /* Maintain the aspect ratio */
-  display: inline-block; /* Align images in a line */
+  width: 14.28vw;
+  height: auto;
+  display: inline-block;
 }
 
 .gpu-table {
@@ -491,7 +492,122 @@ body {
   justify-content: center;
 }
 
+/* contact */
 
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Fill the entire viewport height */
+}
+
+.contact-form {
+  background-color: rgba(90, 90, 90, 0.5); /* Semi-transparent background */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 10px 20px 40px rgba(0,0,0,0.6);
+  width: 100%;
+  max-width: 400px; /* Adjust the width as necessary */
+}
+
+.contact-title {
+  color: var(--white);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contact-input {
+  background-color: transparent;
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  color: var(--white);
+  margin-bottom: 1rem;
+  padding: 10px;
+  width: 100%; /* Full width minus padding */
+  box-sizing: border-box;
+}
+
+/* Style adjustments for the textarea */
+.contact-input[type="textarea"] {
+  height: 150px; /* Adjust height as necessary */
+  resize: vertical; /* Allow vertical resizing */
+}
+
+.contact-button1{
+  background-color: var(--lblue);
+  color: var(--white);
+  border: none;
+  padding: 10px 30px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button1:hover {
+  background-color: #93c1e263; /* Adjust hover color as needed */
+}
+
+/* FAQ */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.faq-container {
+  background-color: rgba(90, 90, 90, 0.5); /* Adjusted for more opacity */
+  border-radius: 10px;
+  padding: 40px;
+  color: var(--white);
+  width: 100%;
+  max-width: 800px; /* Increased width */
+  box-sizing: border-box;
+  margin: auto;
+  text-align: left; /* Left-align the text in the container */
+  box-shadow: 10px 20px 40px rgba(0,0,0,0.6);
+}
+
+.faq-title {
+  color: var(--white);
+  margin-bottom: 2rem;
+}
+
+.faq-item {
+  background-color: transparent;
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  color: var(--white);
+  margin-bottom: 1rem;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-item:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Slight highlight on hover */
+}
+
+.faq-question {
+  font-weight: bold;
+  text-align: left; /* Left-align the text for the question */
+}
+
+.faq-answer {
+  display: none; /* Hide the answer by default */
+  padding-top: 10px; /* Give some space before the answer text */
+  text-align: left; /* Left-align the text for the answer */
+}
+
+.faq-answer.active {
+  display: block; /* Show the answer when active */
+}
+
+/* Continue with other styles from previous CSS if needed */
 
 
 
@@ -531,6 +647,12 @@ body {
 .link {
   margin-bottom:100px;
   list-style: none;
+}
+
+.personal {
+  left: 300px;
+  border: 2px solid black;
+  width: 100px;
 }
 
 

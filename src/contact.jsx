@@ -3,60 +3,52 @@ import { useState } from "react";
 import "./App.css";
 import Navbar from "./Navbar";
 
-function contact() {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
+function Contact() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log('Full Name:', name);
-        console.log('Email Address:', email);
-        console.log('Message:', message);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log('Full Name:', name);
+    console.log('Email Address:', email);
+    console.log('Message:', message);
 
-        setName('');
-        setEmail('');
-        setMessage('');
-    }
+    // Clear the form (If you want to clear the form after submit)
+    setName('');
+    setEmail('');
+    setMessage('');
+  }
 
+  return (
+    <div className="contact-container">
+      <Navbar />
+      <form onSubmit={handleSubmit} className="contact-form">
+        <h1 className="contact-title">Contact Us</h1>
+        <input 
+          className="contact-input"
+          type="text"
+          value={name}
+          placeholder="Name"
+          onChange={(e) => setName(e.target.value)}
+        />
+        <input 
+          className="contact-input"
+          type="email"
+          value={email}
+          placeholder="Email"
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <textarea 
+          className="contact-input"
+          value={message}
+          placeholder="Enter message"
+          onChange={(e) => setMessage(e.target.value)}
+        />
+        <button type="submit" className="contact-button1">Submit</button>
+      </form>
+    </div>
+  );
+}
 
-
-    return (
-        <div class="contactBody">
-            <Navbar />
-        <form onSubmit={handleSubmit}>
-          <div>
-            {/* <label class="contactLabel">Name:</label> */}
-            <input class="contactInput"
-              type="text"
-              value={name}
-              placeholder="Name"
-              onChange={(e) => setName(e.target.value)}
-            />
-          </div>
-          <div>
-          {/* <label class="contactLabel">Email:</label> */}
-            <input class="contactInput"
-              type="email"
-              value={email}
-              placeholder="Email"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div>
-            {/* <label class="contactLabel">Message:</label> */}
-            <input class="contactInput"
-            type="message"
-              value={message}
-              placeholder="Enter message"
-              onChange={(e) => setMessage(e.target.value)}
-            />
-          </div>
-          <button type="submit">Submit</button>
-        </form>
-        </div>
-      );
-    }
-
-
-export default contact; 
+export default Contact;
