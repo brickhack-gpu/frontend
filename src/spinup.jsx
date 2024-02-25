@@ -17,7 +17,7 @@ function spinup() {
     }])
     return ( <>
             <Navbar />
-            <div className="Spinup-title">Spin-up</div>
+            <div className="Spinup-title"></div>
     
             <div className="gpu-container">
                 { availableServers.map(available => {

@@ -25,8 +25,8 @@ function Sidebar() {
           <li className="link"><button class="sidebutton"onClick={handleClickDashboard}>Dashboard</button></li>
           <li className="link"><button class="sidebutton"onClick={handleClickLaunch}>Launch</button></li>
           <li className="link"><button class="sidebutton"onClick={handleClickBilling}>Billing</button></li>
-          <li className="link">Link 4</li>
-          <li className="link">Link 5</li>
+          <li className="link"><button class="sidebutton"onClick={handleClickBilling}>Button</button></li>
+          <li className="link"><button class="sidebutton"onClick={handleClickBilling}>Button</button></li>
           <li className="link"><button class="sidebutton"onClick={handleClickHome}>Sign out</button></li>
 
         </ul>

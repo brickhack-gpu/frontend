@@ -24,6 +24,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/billing" element={<Billing />} />
         <Route path="/spin" element={<Spin />} />
+
       </Routes>
     </Router>
   );

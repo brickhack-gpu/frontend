@@ -19,11 +19,11 @@ function dashboard() {
         
     }])
 
-    const [personal, setPersonal] = useState([{
-        VMs: "0/3",
-        HRate: 0.47,
-        StorageUsed: 133.26,
-    }])
+    // const [personal, setPersonal] = useState([{
+    //     VMs: "0/3",
+    //     HRate: 0.47,
+    //     StorageUsed: 133.26,
+    // }])
     return  <>
                 <Sidebar />
                 
@@ -48,13 +48,31 @@ function dashboard() {
                     );
                 })}
             </div>
+
+            <div class="grid-container">
+            <div class="grid-item"></div>
+            <div class="grid-item">Transactions</div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+            <div class="grid-item">Amount</div>
+            <div class="grid-item">Type</div>
+            <div class="grid-item">Deposit</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>
+            </div> 
             <div className="personal-stats">
             <div className="personal">
-                            <p>Active VMs:</p>
-                            <b>Hourly Rate:</b>
-                            <p>Storage Used:</p>
+                            <p>Active VMs: 0/3</p>
+                            <b>Hourly Rate: $0.47</b>
+                            <p>Storage Used: 133.26B</p>
                         </div>
-                        { personal.map(available => {
+                        {/* { personal.map(available => {
                     return (
                         <div className="personalpersonal">
                             <p>{personal.VMs}</p>
@@ -62,10 +80,10 @@ function dashboard() {
                             <p>{`${personal.StorageUsed}B`}</p>
                         </div>
                     );
-                })}
+                })} */}
 
                 </div>
-            <div>
+
     </>
 }
 
