@@ -40,16 +40,10 @@ function Login() {
     <>
       <Navbar />
       <div className="login1-container">
-<<<<<<< HEAD
-        <form onSubmit={handleSubmit} className="login1-form">
-        <img src="public\fiunainfainfnajfnaifnaskofbafbosfbkfsablkfbaslkf.png" className="logo123" alt="Logo" />
-          <input 
-=======
         <form className="login1-form">
+        <img src="public/fiunainfainfnajfnaifnaskofbafbosfbkfsablkfbaslkf.png" className="logo123" alt="Logo" />
         { error ? <p className="error">{error}</p> : null }
-        <img src="public\botl.png" className="logo123" alt="Logo" />
           <input
->>>>>>> 2eadbfcb3623a4682e856a56e66f85f52aaabacf
             className="login12-input"
             type="email"
             value={email}
