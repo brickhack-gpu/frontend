@@ -1,9 +1,8 @@
 import React from "react";
 import { useState } from "react";
-import "./App.css";
-import Navbar from "./Navbar";
+import "./AppB.css";
 
-function contact() {
+function Model() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
@@ -22,8 +21,7 @@ function contact() {
 
 
     return (
-        <div class="contactBody">
-            <Navbar />
+        <body class="contactBody">
         <form onSubmit={handleSubmit}>
           <div>
             {/* <label class="contactLabel">Name:</label> */}
@@ -54,9 +52,9 @@ function contact() {
           </div>
           <button type="submit">Submit</button>
         </form>
-        </div>
+        </body>
       );
     }
 
 
-export default contact; 
+export default Model; 

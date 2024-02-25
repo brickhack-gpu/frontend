@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./App.css";
+import Navbar from "./Navbar";
 
 function login() {
     const [name, setName] = useState('');
@@ -21,6 +22,8 @@ function login() {
 
 
     return (
+        <>
+        <Navbar />
         <form onSubmit={handleSubmit}>
         `<div class="box">
             <h1>Login</h1>
@@ -55,7 +58,7 @@ function login() {
           <button type="submit">Login</button>
           </div>
         </form>
-
+        </>
       );
     }
 

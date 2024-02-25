@@ -70,13 +70,25 @@
 
 /* //hanson */
 
-.contactInput {
+.contactInput .loginInput{
   padding: 3px;
   margin: 3px;
 }
+
+.contactInput:hover .loginInput:hover{
+  cursor: pointer;
+  padding: 3px;
+  margin: 3px;
+}
+
+
 
 .box {
   padding: 0px 50px 50px 50px;
   border: 2px solid black;
   text-align: center;
+}
+
+* {
+  background-color: transparent;
 }
