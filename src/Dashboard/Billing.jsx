@@ -3,40 +3,17 @@ import Sidebar from './Sidebar';
 
 
 function Billing() {
-  const [billingInfo, setBillingInfo] = useState({
-    fullName: '',
-    address: '',
-    city: '',
-    state: '',
-    zip: '',
-    cardNumber: '',
-    expiration: '',
-    cvv: ''
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setBillingInfo(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(billingInfo); // Replace with actual submit logic
-  };
-
   return (
     <>
+      <div className="dash">
       <Sidebar />
-      <div className="billing-container">
-        <h2 className="billing-title">Billing Information</h2>
-        <form onSubmit={handleSubmit} className="billing-form">
-          {/* Form fields */}
-          {/* ... */}
-          <button type="submit" className="billing-button">Pay with Card</button>
-        </form>
+      <div className="dashcontent">
+      <stripe-buy-button
+  buy-button-id="buy_btn_1OnhI0IXvW0tWfSd4tGfa6Bm"
+  publishable-key="pk_live_51MXTYFIXvW0tWfSd2Bwrg3rnVIrYUEkRtfrDnz6cRUQ4EzNz4aWyPEtCEVywsgawisU4FU1XJ9odI00JycbvMjlF0051rfVF95"
+>
+</stripe-buy-button>
+      </div>
       </div>
     </>
   );
